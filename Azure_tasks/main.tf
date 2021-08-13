@@ -3,6 +3,10 @@ provider "azurerm" {
   features {}
 }
 
+/*
+  A Terraform module only consists of the top-level configuration files in a directory
+*/
+
 module "module_resource_group" {
   source = "./resource_group"
 }
@@ -26,9 +30,9 @@ module "module_vn" {
 }
 
 module "vnet_peering" {
-  source = "./azure_vnet_peering"
+  source            = "./azure_vnet_peering"
   vnet_example_name = "example_virtual_network"
-  vnet_name_peered = "vnet_peered"
+  vnet_name_peered  = "vnet_peered"
   addr_space_peered = [
     "10.1.0.0/28"
   ]

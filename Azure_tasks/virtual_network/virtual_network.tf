@@ -27,9 +27,9 @@ resource "azurerm_virtual_network" "example" {
 }
 
 resource "azurerm_subnet" "subnet_foreach" {
-  for_each = var.subnets_map
-  name = each.value.name
-  address_prefixes = each.value.address_space
+  for_each             = var.subnets_map
+  name                 = each.value.name
+  address_prefixes     = each.value.address_space
   virtual_network_name = azurerm_virtual_network.example.name
-  resource_group_name = data.azurerm_resource_group.rg.name
+  resource_group_name  = data.azurerm_resource_group.rg.name
 }
