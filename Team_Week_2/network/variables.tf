@@ -31,4 +31,3 @@ variable "num_subnet" {
 variable "subnet_prefix" {
   type = list(string)
 }
-

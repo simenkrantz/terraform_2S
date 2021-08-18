@@ -16,7 +16,7 @@ module "network" {
   vnet_adress = ["10.0.0.0/16", "10.1.0.0/16"]
   num_net = 2
   num_subnet = 2
-  subnet_prefix = ["10.0.0.0/24","10.0.1.0/24"]
+  subnet_prefix = ["10.0.0.0/24","10.1.0.0/24"]
 }
 
 module "vm" {
